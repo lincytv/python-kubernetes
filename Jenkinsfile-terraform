@@ -2,10 +2,8 @@ pipeline {
     agent any
     stages{
         stage('Git Checkout'){
-        node('master'){
-      withCredentials([ string(credentialsId: 'cac6558f-acd8-4011-9e0d-677784f2b3f5', variable: 'https://github.com/iamnst19/Istio_EKS_Terraform/tree/main/cluster')],
-      checkout([$class: 'GitSCM', branches: [[name: '*/cluster']], 
-    doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'cac6558f-acd8-4011-9e0d-677784f2b3f5', url: "https://github.com/iamnst19/Istio_EKS_Terraform/tree/main/cluster"]]])
+        sh 'git clone https://github.com/iamnst19/Istio_EKS_Terraform.git'
+        }
         stage('Terraform Init'){
             steps{
                 sh 'terraform init'
