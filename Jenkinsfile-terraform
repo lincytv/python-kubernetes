@@ -1,9 +1,11 @@
 pipeline {
     agent any
     stages{
-        stage('Git Checkout'){
+        stage('Git Checkout')
+        steps {
         sh 'git clone https://github.com/iamnst19/Istio_EKS_Terraform.git'
         }
+    }
         stage('Terraform Init'){
             steps{
                 sh 'terraform init'
@@ -16,4 +18,3 @@ pipeline {
         }
       }
    }
-}
