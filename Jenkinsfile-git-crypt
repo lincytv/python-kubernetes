@@ -1,4 +1,14 @@
 node {
+    stages {
+        stage(git-crypt) 
+        withCredentials([
+            (credintialid)
+        ])
+        {
+          echo "***start of pipline***"
+          sh """
 
-
+          """
+        }
+    }
 }
