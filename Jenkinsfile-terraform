@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Git Checkout'){
         steps {
-        sh 'git clone https://github.com/iamnst19/Istio_EKS_Terraform.git'
+        echo 'cloning'
           }
         }
         stage('Terraform Init'){
