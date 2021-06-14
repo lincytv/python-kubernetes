@@ -17,8 +17,8 @@ pipeline {
                 echo "${currentBuild.currentResult}"
             }
         }
-        post('Final'){
-         steps {
+        post {
+         success {
          echo "${currentBuild.currentResult}"
          }
         }
