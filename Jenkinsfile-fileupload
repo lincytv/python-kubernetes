@@ -1,10 +1,9 @@
 node {
 
- stages {
+
    stage {
     sh ' ls -al'
    }
  
- }
-
+ 
 }
