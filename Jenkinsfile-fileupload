@@ -2,6 +2,7 @@ node {
 
 
    stage ('Welcome') {
+   sh ' ls $JENKINS_HOME';
    sh ' pwd';
     sh ' ls -al';
    }
