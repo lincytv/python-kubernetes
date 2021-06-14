@@ -2,7 +2,8 @@ node {
 
 
    stage ('Welcome') {
-    sh ' ls -al'
+   sh ' pwd';
+    sh ' ls -al';
    }
  
  
