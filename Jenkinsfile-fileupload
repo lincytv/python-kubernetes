@@ -5,6 +5,11 @@ node {
    sh ' ls $JENKINS_HOME';
    sh ' pwd';
     sh ' ls -al';
+    sh """
+    echo "${FILENAME}"
+    cp "${FILENAME}" dataops-vault
+    ls -la
+    """
    }
  
  
