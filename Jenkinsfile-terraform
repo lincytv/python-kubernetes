@@ -17,5 +17,10 @@ pipeline {
                 echo "${currentBuild.currentResult}"
             }
         }
+        post('Final'){
+         steps {
+         echo "${currentBuild.currentResult}"
+         }
+        }
     }   
 }
