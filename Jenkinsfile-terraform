@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Terraform Init'){
             steps{
-                sh 'terraform init'
+                sh 'echo "Hello1"'
             }
         }
         stage('Terraform Apply'){
             steps{
-                sh 'terraform apply --auto-approve'
+                
                 echo "${currentBuild.currentResult}"
             }
         }
